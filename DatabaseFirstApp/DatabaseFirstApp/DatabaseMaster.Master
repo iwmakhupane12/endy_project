@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DatabaseMaster.master.cs" Inherits="DatabaseFirstApp.DatabaseMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Endy DatabaseApp</title>
+
+    <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Index.aspx">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register.aspx">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.aspx">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Client.aspx">Client</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p id="dateTime"></p>
+        </footer>
+    </div>
+
+    <script>
+        let str1 = '&copy; ';
+        let str2 = " - Future IT Solutions";
+        let str3 = new Date().getFullYear();
+        document.getElementById("dateTime").innerHTML = str1.concat(str3,str2)
+    </script> 
+</body>
+</html>

@@ -40,6 +40,24 @@ namespace DatabaseFirstApp {
         protected global::System.Web.UI.WebControls.TextBox txtRegUsername;
         
         /// <summary>
+        /// radClient control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton radClient;
+        
+        /// <summary>
+        /// radDriver control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton radDriver;
+        
+        /// <summary>
         /// txtRegPassword control.
         /// </summary>
         /// <remarks>

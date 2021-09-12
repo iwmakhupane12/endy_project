@@ -37,12 +37,24 @@ namespace DatabaseFirstApp
 
                 if (!IsRegistered)
                 {
+                    string userType = "";
+
+                    if (radClient.Checked)
+                    {
+                        userType = radClient.Value;
+                    }
+                    else
+                    {
+                        userType = radDriver.Value;
+                    }
+                     
+
                     var AddUser = new user
                     {
                         Full_Name = txtRegFullname.Text,
                         Surname = txtRegSurname.Text,
                         Username = txtRegUsername.Text,
-                        User_Type = "Client",
+                        User_Type = userType,
                         Password = Secrecy.HashPassword(txtRegPassword.Text)
                     };
 
